@@ -1,27 +1,23 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet} from 'react-native';
+import {} from 'react-native';
+import {ThemeProvider} from 'styled-components/native'
+import { useFonts, Overpass_400Regular, Overpass_600SemiBold } from '@expo-google-fonts/overpass';
+
+import dark from './src/themes/dark'
 import Home from './src/screens/Home';
 
 
 export default function App() {
+  let [fontsLoaded] = useFonts({
+    Overpass_400Regular,Overpass_600SemiBold,
+  });
+
+  if (!fontsLoaded) {
+    return null;
+  }
   return (
-   <>
-   <StatusBar style='light'/>
+    <ThemeProvider theme={dark}>
     <Home/>
-   </>
+    </ThemeProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    color:'#AFAFAF',
-    backgroundColor: '#1B1D22',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  text:{
-    color:'#AFAFAF',
-
-  }
-});

@@ -1,29 +1,32 @@
 import React from 'react';
-import { StyleSheet,Text } from 'react-native';
-import { useFonts, Overpass_400Regular } from '@expo-google-fonts/overpass';
+import styled from 'styled-components/native'
 
-// import { Container } from './styles';
-export type Props = {
-  text: string;
-};
-const AppText: React.FC<Props> = ({text}) => {
-  let [fontsLoaded] = useFonts({
-    Overpass_400Regular
-  })
-  if (!fontsLoaded) {
-    return null;
-  }
-  return <>
-    <Text style={styles.text}>{text}</Text>
-  </>
-}
- 
-const styles = StyleSheet.create({
-  text:{
-    color:'#AFAFAF',
-    fontFamily: 'Overpass_400Regular'
-  }
+export const Title = styled.Text`
+  font-size: 33px;
+  line-height: 42px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: ${({ theme }) => theme.COLORS.WHITE };
+  font-family: 'Overpass_600SemiBold';
+  margin-left: 28px;
+  font-weight: 600;
+  margin-right: 28px;
+`;
 
-});
+export const Container = styled.View`
+  flex: 1;
+  background-color: ${({theme}) => theme.COLORS.BACKGROUND};
+  align-items: center;
+  /* justify-content: center; */
+`;
 
-export default AppText;
+export const Logo = styled.Image`
+  margin: 137px 69px 57px 69px;
+  width: 222px;
+  height: 214px;
+`;
+
+export const Description = styled.Text`
+
+`

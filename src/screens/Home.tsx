@@ -1,21 +1,13 @@
 import React from 'react';
-import { StyleSheet,View } from 'react-native';
-import Text from '../components/AppText'
-
-// import { Container } from './styles';
+import {} from 'react-native';
+import {Title,Container, Logo} from '../components/AppText'
 
 export default function Home(){
-  return <View style={styles.container}>
-    <Text text="Home"/>
-  </View>
+  
+  return <> 
+  <Container>
+    <Logo source={require('../assets/cloud-and-thunder.png')} />
+    <Title>Descubra o Clima na sua Cidade</Title>
+  </Container>
+  </>
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    color:'#AFAFAF',
-    backgroundColor: '#1B1D22',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
