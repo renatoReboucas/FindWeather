@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import {} from 'react-native';
 import {ThemeProvider} from 'styled-components/native'
-import { useFonts, Overpass_400Regular, Overpass_600SemiBold } from '@expo-google-fonts/overpass';
+import { useFonts, Overpass_400Regular, Overpass_600SemiBold, } from '@expo-google-fonts/overpass';
 
 import dark from './src/themes/dark'
 import Home from './src/screens/Home';
