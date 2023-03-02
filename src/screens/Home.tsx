@@ -6,7 +6,7 @@ import Text from '../components/AppText'
 
 export default function Home(){
   return <View style={styles.container}>
-    <Text text="Home11"/>
+    <Text text="Home"/>
   </View>
 }
 
